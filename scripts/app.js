@@ -1,4 +1,15 @@
 const quoteGenerator = document.getElementById('quotes');
+const quoteAuthors = document.getElementById('author');
+
+const clickBtn = document.getElementById('button');
+
+clickBtn.addEventListener('click', () => {
+  const randomOutput = Math.floor(Math.random() * quotes.length);
+  const randomQuote = quotes[randomOutput];
+  quoteGenerator.textContent = randomQuote.quote;
+  quoteAuthors.textContent = randomQuote.author;
+
+});   
 
 const quotes = [
   {
@@ -42,3 +53,6 @@ const quotes = [
     author: "Vince Lombardi"
   }
 ];
+
+
+
